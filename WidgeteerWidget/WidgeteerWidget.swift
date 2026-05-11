@@ -60,8 +60,9 @@ struct WidgeteerWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    WidgeteerWidget()
-} timeline: {
-    WidgeteerEntry(date: .now, text: "Preview text")
+struct WidgeteerWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        WidgeteerWidgetEntryView(entry: WidgeteerEntry(date: .now, text: "Preview text"))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
 }
