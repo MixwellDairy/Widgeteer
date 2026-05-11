@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    private static let appGroupSuite = "group.Personal.Widgeteer"
-    private static let storageKey = "widgetText"
-
-    @AppStorage(storageKey, store: UserDefaults(suiteName: appGroupSuite))
+    @AppStorage(
+        WidgeteerSharedDefaults.storageKey,
+        store: UserDefaults(suiteName: WidgeteerSharedDefaults.appGroupSuite)
+    )
     private var savedText: String = ""
 
     @State private var inputText: String = ""

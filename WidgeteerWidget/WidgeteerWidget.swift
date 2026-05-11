@@ -17,9 +17,14 @@ struct Provider: TimelineProvider {
     }
 
     private func loadSavedText() -> String {
-        let defaults = UserDefaults(suiteName: "group.Personal.Widgeteer")
-        return defaults?.string(forKey: "widgetText")?.trimmingCharacters(in: .whitespacesAndNewlines)
-            .flatMap { $0.isEmpty ? nil : $0 } ?? "No text saved yet."
+        let defaults = UserDefaults(suiteName: WidgeteerSharedDefaults.appGroupSuite)
+        let trimmed = defaults?
+            .string(forKey: WidgeteerSharedDefaults.storageKey)?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        if let trimmed, !trimmed.isEmpty {
+            return trimmed
+        }
+        return "No text saved yet."
     }
 }
 

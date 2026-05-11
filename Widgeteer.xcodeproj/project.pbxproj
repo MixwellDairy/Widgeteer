@@ -11,8 +11,10 @@ A00000000000000000000100 /* WidgeteerApp.swift in Sources */ = {isa = PBXBuildFi
 A00000000000000000000101 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000201 /* ContentView.swift */; };
 A00000000000000000000102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000202 /* Assets.xcassets */; };
 A00000000000000000000103 /* WidgeteerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000210 /* WidgeteerWidget.swift */; };
-A00000000000000000000104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000211 /* Assets.xcassets */; };
-A00000000000000000000105 /* WidgeteerWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A00000000000000000000301 /* WidgeteerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A00000000000000000000104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000211 /* Assets.xcassets */; };
+		A00000000000000000000105 /* WidgeteerWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A00000000000000000000301 /* WidgeteerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A00000000000000000000106 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000205 /* SharedDefaults.swift */; };
+		A00000000000000000000107 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000205 /* SharedDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,10 @@ runOnlyForDeploymentPostprocessing = 0;
 A00000000000000000000200 /* WidgeteerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgeteerApp.swift; sourceTree = "<group>"; };
 A00000000000000000000201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 A00000000000000000000202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-A00000000000000000000203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-A00000000000000000000204 /* Widgeteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgeteer.entitlements; sourceTree = "<group>"; };
-A00000000000000000000210 /* WidgeteerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgeteerWidget.swift; sourceTree = "<group>"; };
+		A00000000000000000000203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00000000000000000000204 /* Widgeteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgeteer.entitlements; sourceTree = "<group>"; };
+		A00000000000000000000205 /* SharedDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
+		A00000000000000000000210 /* WidgeteerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgeteerWidget.swift; sourceTree = "<group>"; };
 A00000000000000000000211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 A00000000000000000000212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 A00000000000000000000213 /* WidgeteerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgeteerWidget.entitlements; sourceTree = "<group>"; };
@@ -88,10 +91,11 @@ children = (
 A00000000000000000000200 /* WidgeteerApp.swift */,
 A00000000000000000000201 /* ContentView.swift */,
 A00000000000000000000202 /* Assets.xcassets */,
-A00000000000000000000203 /* Info.plist */,
-A00000000000000000000204 /* Widgeteer.entitlements */,
-);
-};
+				A00000000000000000000203 /* Info.plist */,
+				A00000000000000000000204 /* Widgeteer.entitlements */,
+				A00000000000000000000205 /* SharedDefaults.swift */,
+			);
+		};
 A00000000000000000000702 /* WidgeteerWidget */ = {
 isa = PBXGroup;
 path = WidgeteerWidget;
@@ -212,19 +216,21 @@ A00000000000000000000900 /* Sources */ = {
 isa = PBXSourcesBuildPhase;
 buildActionMask = 2147483647;
 files = (
-A00000000000000000000100 /* WidgeteerApp.swift in Sources */,
-A00000000000000000000101 /* ContentView.swift in Sources */,
-);
-runOnlyForDeploymentPostprocessing = 0;
-};
+				A00000000000000000000100 /* WidgeteerApp.swift in Sources */,
+				A00000000000000000000101 /* ContentView.swift in Sources */,
+				A00000000000000000000106 /* SharedDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 A00000000000000000000901 /* Sources */ = {
 isa = PBXSourcesBuildPhase;
 buildActionMask = 2147483647;
-files = (
-A00000000000000000000103 /* WidgeteerWidget.swift in Sources */,
-);
-runOnlyForDeploymentPostprocessing = 0;
-};
+			files = (
+				A00000000000000000000103 /* WidgeteerWidget.swift in Sources */,
+				A00000000000000000000107 /* SharedDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
